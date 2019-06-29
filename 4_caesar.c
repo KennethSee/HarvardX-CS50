@@ -18,7 +18,7 @@ int main(int argc, string argv[])
         return 1;
     }
     int key = str_digits_convert(argv[1]);
-    printf("%i", key);
+//     printf("%i", key);
     string input = get_string("plaintext: \n");
     printf("\n");
     printf("ciphertext: ");
@@ -29,10 +29,18 @@ int main(int argc, string argv[])
             if (islower(input[i]) > 0)
             {
                 c = ((input[i] - 96 + key) % 26) + 96;
+                if (c == 96)
+                {
+                    c += 26;
+                }
             }
             else
             {
                 c = ((input[i] - 64 + key) % 26) + 64;
+                if (c == 64)
+                {
+                    c += 26;
+                }
             }
             printf("%c", c);
         }
