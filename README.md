@@ -34,3 +34,6 @@ The problem requires a program that modifies the color of the pixels in the pict
 
 ### 7. Resize
 Program takes in an integer n as the second command-line argument,the path of an input image file as the third command-line argument, and the name of the output image file as the third command-line argument. The ouput image file is the input image file expanded by a factor of n.
+
+### 8. Recover
+Program recovers JPEG images from raw file by scanning through each block of 512 bytes and writing the bytes to the relevant image files.
