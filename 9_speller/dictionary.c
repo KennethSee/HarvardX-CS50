@@ -70,10 +70,6 @@ bool load(const char *dictionary)
         
         counter++;
     }
-    if (feof(file))
-    {
-        free(hashtable[hashNum]);
-    }
 
     // Close dictionary
     fclose(file);
