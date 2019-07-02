@@ -37,3 +37,6 @@ Program takes in an integer n as the second command-line argument,the path of an
 
 ### 8. Recover
 Program recovers JPEG images from raw file by scanning through each block of 512 bytes and writing the bytes to the relevant image files.
+
+### 9. Speller
+Program takes in a textfile and checks for mispelled word according to provided dictionary. If the dictionary file is not specified, *large* will be used by default.
