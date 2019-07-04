@@ -1,0 +1,60 @@
+#ribbon-border
+{
+    height: 30px;
+}
+
+#ribbon-cell
+{
+    text-align: center;
+    width: 25%;
+    font-size: 20pt;
+    font-family: "Palatino";
+}
+
+a:link, a:visited
+{
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+#content
+{
+    font-family: "Palatino";
+    text-align: center;
+    color: white;
+}
+
+h1
+{
+    font-style: italic;
+    color: #BC986A;
+}
+
+body
+{
+    background-color: #659DBD;
+}
+
+ul#list-school
+{ 
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+}
+
+ol#list-work
+{ 
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+}
+
+ol#list-places
+{ 
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+}
