@@ -40,3 +40,6 @@ Program recovers JPEG images from raw file by scanning through each block of 512
 
 ### 9. Speller
 Program takes in a textfile and checks for mispelled word according to provided dictionary. If the dictionary file is not specified, *large* will be used by default.
+
+### 10. Homepage
+My first built website after being newly introduced to HTML, CSS, and JavaScript.
