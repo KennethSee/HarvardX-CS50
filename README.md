@@ -43,3 +43,6 @@ Program takes in a textfile and checks for mispelled word according to provided 
 
 ### 10. Homepage
 My first built website after being newly introduced to HTML, CSS, and JavaScript.
+
+### 11. Bleep
+Program takes in dictionary words from text file specified in command-line argument. It then prompts user for a message. Message will be printed, but any words contained the dictionary will be replaced by asterisks corresponding to the length of word.
