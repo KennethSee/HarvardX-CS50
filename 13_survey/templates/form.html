@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+        <!-- Text input for name -->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here">
+        </div>
+        <!-- Dropdown select for gender -->
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" name="gender" placeholder="Gender">
+                <option disabled selected value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="unspecified">I choose not to specify</option>
+            </select>
+        </div>
+        <!-- Radio options for race -->
+        Race<br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="white" checked>
+            <label class="form-check-label" for="raceRadio1">
+            White
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="black" checked>
+            <label class="form-check-label" for="raceRadio1">
+            Black
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="asian" checked>
+            <label class="form-check-label" for="raceRadio1">
+            Asian/Pacific Islander
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="hispanic" checked>
+            <label class="form-check-label" for="raceRadio1">
+            Hispanic
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="other" checked>
+            <label class="form-check-label" for="raceRadio1">
+            Other
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="raceRadios1" value="unspecified" checked>
+            <label class="form-check-label" for="raceRadio1">
+            I choose not to disclose
+            </label>
+        </div>
+        <!-- Checkboxes for user to declare food allergies/dietary restrictions -->
+        <div>
+            Dietary Restrictions<br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="nuts" id="dietrestriction" name="dietrestriction">
+                <label class="form-check-label" for="dietrestriction">
+                No nuts
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="meat" id="dietrestriction" name="dietrestriction">
+                <label class="form-check-label" for="dietrestriction">
+                Vegetarian
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="gluten" id="dietrestriction" name="dietrestriction">
+                <label class="form-check-label" for="dietrestriction">
+                Glutten-free
+                </label>
+            </div>
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('#name').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('#gender').value) {
+                alert('You must provide your gender!');
+                return false;
+            }
+            else if (!document.querySelector('#raceRadios1').value) {
+                alert('You must provide your race!');
+                return false;
+            }
+            return true;
+        };
+    </script>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1>Persons</h1>
+    <div class="person_table">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Race</th>
+                    <th scope="col">Dietary Restrictions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in persons %}
+                    <tr>
+                        <td>{{ person[0] }}</td>
+                        <td>{{ person[1] }}</td>
+                        <td>{{ person[2] }}</td>
+                        <td>{{ person[3] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
