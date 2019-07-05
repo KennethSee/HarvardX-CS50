@@ -46,3 +46,6 @@ My first built website after being newly introduced to HTML, CSS, and JavaScript
 
 ### 11. Bleep
 Program takes in dictionary words from text file specified in command-line argument. It then prompts user for a message. Message will be printed, but any words contained the dictionary will be replaced by asterisks corresponding to the length of word.
+
+### 12. Similarities
+A web application built on HTML5, CSS, Python and Flask, that allows the user to upload two files and compare similarities by line, sentence, or substring. Similarities are highlighted in yellow.
