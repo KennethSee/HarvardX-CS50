@@ -49,3 +49,6 @@ Program takes in dictionary words from text file specified in command-line argum
 
 ### 12. Similarities
 A web application built on HTML5, CSS, Python and Flask, that allows the user to upload two files and compare similarities by line, sentence, or substring. Similarities are highlighted in yellow.
+
+### 13. Survey
+A web application that takes in input from users, stores it in a csv file and outputs the csv contents as a table in a separate web page. Validation is performed on both the client and server side to ensure necessary fields are filled in during submission of form.
