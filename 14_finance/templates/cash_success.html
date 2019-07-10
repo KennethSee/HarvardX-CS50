@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Success
+{% endblock %}
+
+{% block main %}
+    <h1><p>Cash Addition Successful</p></h1>
+    <div><p>You have successfully added {{ amount }} to your account! Your new balance is {{ cash }}.</p></div>
+    
+    <!-- Return to homepage -->
+    <div>
+        <form action="/index" method="get">
+            <a class="btn btn-primary btn-lg btn-block" href="/index">Return to homepage</a>
+        </form>
+    </div>
+{% endblock %}

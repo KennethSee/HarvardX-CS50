@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1><p>Transaction History</p></h1>
+    <div class="transactions_table">
+        <table class="table table-bordered">
+            <thead id="table_head">
+                <tr>
+                    <th scope="col">Transaction Type</th>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Share</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <!-- Return to homepage -->
+    <div>
+        <form action="/index" method="get">
+            <a class="btn btn-primary btn-lg btn-block" href="/index">Return to homepage</a>
+        </form>
+    </div>
+{% endblock %}

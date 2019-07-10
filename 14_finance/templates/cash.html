@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cash
+{% endblock %}
+
+{% block main %}
+    <h1><p>Add Cash</p></h1>
+    <form action="/cash" method="post">
+        <div>
+            Current Cash: {{ cash }}
+        </div>
+        <div class="form-group">
+            Add: <input autocomplete="off" autofocus class="form-control" name="amount" type="text">
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Add Cash</button>
+    </form>
+
+    <script>
+        document.frm.submit.onclick = function(){
+            // Validate text field is not empty
+            if(document.frm.amount.value === "")
+            {
+                alert("Please enter the amount of cash you wish to add");
+                return false;
+            }
+        }
+    </script>
+{% endblock %}

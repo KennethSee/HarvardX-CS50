@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Success
+{% endblock %}
+
+{% block main %}
+    <h1><p>Purchase Successful</p></h1>
+    <div><p>You have successfully purchased {{ quantity }} shares of {{ ticker }} for {{ cost }}! Your remaining balance is {{ balance }}</p></div>
+    
+    <!-- Return to homepage -->
+    <div>
+        <form action="/index" method="get">
+            <a class="btn btn-primary btn-lg btn-block" href="/index">Return to homepage</a>
+        </form>
+    </div>
+{% endblock %}

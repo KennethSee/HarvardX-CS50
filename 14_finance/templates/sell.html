@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+    <!-- <script>
+        $(document).ready(function() {
+            $('#stocks').change(function() {
+    
+                var stocks = $('#stocks').val();
+    
+                // Make Ajax Request and expect JSON-encoded data
+                $.getJSON(
+                    '/sell' + '/' + stocks,
+                    function(data) {
+        
+                        // Remove old options
+                        $('#food').find('option').remove();                                
+            
+                        // Add new items
+                        $.each(data, function(key, val) {
+                            var option_item = '<option value="' + val + '">' + val + '</option>'
+                            $('#food').append(option_item);
+                        });
+                    }
+                );
+            });
+        });
+    </script> -->
+{% endblock %}
+
+{% block main %}
+    <h1><p>Sell your shares</p></h1>
+    <form action="/sell" method="post">
+        <div>
+            <select class="custom-select" name="symbol">
+                <option selected>Choose which share to sell</option>
+                {% for share in shares %}
+                <option value="{{ share }}">{{ share }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            Number of shares: <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Number of shares" type="text">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Sell</button>
+        </div>
+    </form>
+    
+    <script>
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('#symbol').value) {
+                alert('You must select a stock!');
+                return false;
+            }
+            else if (!document.querySelector('#shares').value) {
+                alert('You must provide the number of shares you wish to sell!');
+                return false;
+            }
+            else if (isNAN(document.querySelector('#shares').value)) {
+                alert('You must enter a number!');
+                return false;
+            }
+            else if (document.querySelector('#shares').value < 1) {
+                alert('You must enter a positive number!');
+                return false;
+            }
+            return true;
+        };
+    </script>
+{% endblock %}

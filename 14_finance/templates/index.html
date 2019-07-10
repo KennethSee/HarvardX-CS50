@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1><p>Portfolio Summary</p></h1>
+    <div class="portfolio_table">
+        <table class="table table-bordered">
+            <thead id="table_head">
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="value_table">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Cash: </td>
+                    <td>{{ cash }}</td>
+                </tr>
+                <tr>
+                    <td>Total Value: </td>
+                    <td>{{ total_value }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

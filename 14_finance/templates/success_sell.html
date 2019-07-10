@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Success
+{% endblock %}
+
+{% block main %}
+    <h1><p>Sale Successful</p></h1>
+    <div><p>You have successfully sold {{ quantity }} shares of {{ ticker }} at {{ unit_cost }} for a total of {{ cost }}! Your remaining cash balance is {{ new_cash }}</p></div>
+    
+    <!-- Return to homepage -->
+    <div>
+        <form action="/index" method="get">
+            <a class="btn btn-primary btn-lg btn-block" href="/index">Return to homepage</a>
+        </form>
+    </div>
+{% endblock %}
