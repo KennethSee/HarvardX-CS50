@@ -52,3 +52,10 @@ A web application built on HTML5, CSS, Python and Flask, that allows the user to
 
 ### 13. [Survey](https://github.com/KennethSee/HarvardX-CS50/tree/master/13_survey)
 A web application that takes in input from users, stores it in a csv file and outputs the csv contents as a table in a separate web page. Validation is performed on both the client and server side to ensure necessary fields are filled in during submission of form.
+
+### 14. [Finance](https://github.com/KennethSee/HarvardX-CS50/tree/master/14_finance)
+A web application that allows a user to create a unique account to buy and sell stocks, and monitor the status of the user's portfolio. The frontend is powered by Bootstrap and JQuery which is connected to a server ran on Flask. Data is posted and pulled from a database hosted on sqlite. Stock prices are obtained via API calls from IEX Cloud.
+
+Note: An IEX API key has to obtained through an IEX account and exported for the application to work.
+
+export API_KEY=*api-key*
